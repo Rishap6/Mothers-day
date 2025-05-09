@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Ensures white background during popup */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fff0f5;
+    color: #333;
+    text-align: center;
+}
+
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Change flex direction to row */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.photo {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.letter {
+    width: 50%; /* Adjust width to leave space for photos */
+    height: 80vh; /* Full height of the viewport, but leaving some room for photos */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Heart animation surprise */
+.heart {
+    position: absolute;
+    font-size: 30px;
+    animation: floatUp 6s ease-in-out infinite;
+    opacity: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
