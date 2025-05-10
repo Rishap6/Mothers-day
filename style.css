@@ -75,9 +75,10 @@ button {
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;         /* <-- Updated */
+    justify-content: flex-start;     /* <-- Updated */
     overflow-y: auto;
+    box-sizing: border-box;
 }
 
 h1 {
