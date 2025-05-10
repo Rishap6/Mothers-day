@@ -7,6 +7,13 @@ function startSite() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("main-content").classList.remove("hidden");
     document.body.style.backgroundColor = "#fff0f5"; // Restore main content background
+
+    // Play background music
+    const music = document.getElementById("bg-music");
+    music.play().catch((e) => {
+        console.log("Autoplay blocked:", e);
+    });
+
     startSlideshow();
     createHearts();
 }
@@ -27,7 +34,6 @@ function startSlideshow() {
 }
 
 // Heart animation surprise
-// Heart animation surprise with infinite loop
 function createHearts() {
     setInterval(() => {
         const heart = document.createElement("div");
@@ -38,4 +44,5 @@ function createHearts() {
         setTimeout(() => heart.remove(), 6000); // Remove after animation ends
     }, 500); // Create a new heart every 500ms
 }
+
 
